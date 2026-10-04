@@ -1,0 +1,655 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #08050a;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255, 70, 130, 0.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(180, 70, 255, 0.15),
+            transparent 30%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   INTRO SCREEN
+========================= */
+
+.intro {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 54, 118, 0.12),
+            transparent 45%
+        );
+}
+
+
+.intro-card {
+    width: min(650px, 95%);
+
+    text-align: center;
+
+    padding: 70px 40px;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.04);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.5);
+
+    animation: cardAppear 1.2s ease;
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+.small-heart {
+    font-size: 55px;
+
+    color: #ff4d88;
+
+    animation: heartbeat 1.5s infinite;
+}
+
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+
+.small-text {
+    color: #c8c0c8;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    font-size: 12px;
+
+    margin: 20px 0;
+}
+
+
+.intro-card h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(40px, 7vw, 72px);
+
+    line-height: 1.05;
+
+    background: linear-gradient(
+        120deg,
+        #ffffff,
+        #ff9fbd,
+        #ffffff
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+.intro-text {
+    color: #aaa2aa;
+
+    margin: 25px 0 35px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.surprise-btn,
+.memory-btn {
+
+    border: none;
+
+    padding: 15px 28px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #ff3978,
+        #b52cff
+    );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(255, 48, 120, .3);
+
+    transition: .3s ease;
+}
+
+
+.surprise-btn span {
+    margin-left: 8px;
+}
+
+
+.surprise-btn:hover,
+.memory-btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 40px rgba(255, 48, 120, .45);
+}
+
+
+/* =========================
+   BIRTHDAY SECTION
+========================= */
+
+.birthday {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 80px 20px;
+
+    text-align: center;
+
+    animation: birthdayReveal 1.5s ease;
+}
+
+
+.birthday.show {
+    display: block;
+}
+
+
+@keyframes birthdayReveal {
+
+    from {
+        opacity: 0;
+        transform: scale(.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.content {
+    max-width: 850px;
+
+    margin: auto;
+}
+
+
+.eyebrow {
+
+    color: #ff6d9c;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+
+.birthday-title {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(48px, 9vw, 90px);
+
+    line-height: 1;
+
+    background: linear-gradient(
+        135deg,
+        #fff,
+        #ff83ac,
+        #d96cff
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+.birthday-title span {
+    -webkit-text-fill-color: initial;
+}
+
+
+.name {
+
+    font-size: 28px;
+
+    letter-spacing: 10px;
+
+    color: #ffffff;
+
+    margin: 20px 0;
+}
+
+
+.wish {
+
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    color: #aaa2aa;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo-wrapper {
+
+    position: relative;
+
+    width: 330px;
+
+    height: 330px;
+
+    margin: 40px auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.glow {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 50%;
+
+    background: #ff3978;
+
+    filter: blur(70px);
+
+    opacity: .25;
+}
+
+
+.photo-wrapper img {
+
+    position: relative;
+
+    width: 290px;
+
+    height: 290px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.6);
+
+    animation: floating 4s ease-in-out infinite;
+}
+
+
+@keyframes floating {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+.message {
+
+    color: #d0c8d0;
+
+    font-size: 16px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.message-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(0,0,0,.75);
+
+    backdrop-filter: blur(12px);
+
+    z-index: 100;
+}
+
+
+.message-modal.show {
+    display: flex;
+}
+
+
+.modal-card {
+
+    position: relative;
+
+    width: min(520px, 95%);
+
+    padding: 45px 35px;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.12),
+            rgba(255,255,255,.04)
+        );
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.6);
+
+    animation: modalIn .5s ease;
+}
+
+
+@keyframes modalIn {
+
+    from {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+.close {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 20px;
+
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+
+.envelope {
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+
+.modal-card h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 38px;
+
+    color: #ff86ac;
+
+    margin-bottom: 20px;
+}
+
+
+.modal-card p {
+
+    color: #c7c0c7;
+
+    line-height: 1.8;
+
+    margin: 12px 0;
+}
+
+
+.modal-card h3 {
+
+    color: white;
+
+    margin-top: 20px;
+}
+
+
+.signature {
+
+    color: #ff79a6 !important;
+
+    font-style: italic;
+}
+
+
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+.music-btn {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    background: rgba(255,255,255,.08);
+
+    color: white;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    z-index: 50;
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart {
+
+    position: fixed;
+
+    bottom: -30px;
+
+    color: #ff4d88;
+
+    font-size: 18px;
+
+    pointer-events: none;
+
+    animation: floatHeart linear forwards;
+
+    z-index: 2;
+}
+
+
+@keyframes floatHeart {
+
+    0% {
+        transform: translateY(0) scale(.7) rotate(0);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            scale(1.5)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px) {
+
+    .intro-card {
+        padding: 50px 22px;
+    }
+
+    .birthday {
+        padding-top: 60px;
+    }
+
+    .photo-wrapper {
+        width: 280px;
+        height: 280px;
+    }
+
+    .photo-wrapper img {
+        width: 240px;
+        height: 240px;
+    }
+
+    .name {
+        font-size: 22px;
+        letter-spacing: 7px;
+    }
+
+    .wish {
+        font-size: 15px;
+    }
+
+    .modal-card {
+        padding: 40px 25px;
+    }
+}

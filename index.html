@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="hearts"></div>
+
+    <!-- Intro Screen -->
+    <section class="intro" id="intro">
+
+        <div class="intro-card">
+
+            <div class="small-heart">♡</div>
+
+            <p class="small-text">A little surprise for you...</p>
+
+            <h1>
+                Someone Special<br>
+                Has a Birthday Today
+            </h1>
+
+            <p class="intro-text">
+                I made something special just for you.
+            </p>
+
+            <button class="surprise-btn" onclick="openSurprise()">
+                Open Your Surprise
+                <span>♥</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Main Birthday Section -->
+    <section class="birthday" id="birthday">
+
+        <div class="content">
+
+            <p class="eyebrow">TODAY IS YOUR SPECIAL DAY ✨</p>
+
+            <h1 class="birthday-title">
+                Happy Birthday
+                <span>❤️</span>
+            </h1>
+
+            <h2 class="name">
+                RITI
+            </h2>
+
+            <p class="wish">
+                May your life always be filled with happiness,
+                beautiful memories, endless smiles and
+                all the love your heart can hold.
+            </p>
+
+
+            <!-- Photo -->
+            <div class="photo-wrapper">
+
+                <div class="glow"></div>
+
+                <img
+                    src="WhatsApp Image 2026-05-21 at 8.08.20 PM.jpeg"
+                    alt="Birthday Photo"
+                >
+
+            </div>
+
+
+            <p class="message">
+                You deserve all the beautiful things
+                this world has to offer. 🌸
+            </p>
+
+
+            <button class="memory-btn" onclick="showMessage()">
+                💌 Open My Message
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Hidden Message -->
+    <div class="message-modal" id="messageModal">
+
+        <div class="modal-card">
+
+            <button class="close" onclick="closeMessage()">×</button>
+
+            <div class="envelope">💌</div>
+
+            <h2>For You ❤️</h2>
+
+            <p>
+                On your special day, I just want you to know
+                how precious you are.
+            </p>
+
+            <p>
+                May every dream you have come true,
+                may every smile stay a little longer,
+                and may your life always be surrounded
+                by people who truly love you.
+            </p>
+
+            <h3>
+                Stay happy. Stay beautiful. ✨
+            </h3>
+
+            <p class="signature">
+                From your favorite person ❤️
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Music Button -->
+    <button class="music-btn" onclick="toggleMusic()" id="musicBtn">
+        🔊
+    </button>
+
+    <!-- Optional music -->
+    <audio id="birthdayMusic" loop>
+        <source src="birthday-music.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
