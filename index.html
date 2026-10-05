@@ -4,37 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Happy Birthday ❤️</title>
+    <title>Happy Birthday RITI ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Animated Background -->
-    <div class="hearts"></div>
+    <!-- Sparkles -->
+    <div class="sparkles"></div>
 
-    <!-- Intro Screen -->
-    <section class="intro" id="intro">
+    <!-- INTRO -->
+    <section id="intro" class="intro">
 
-        <div class="intro-card">
+        <div class="intro-content">
 
-            <div class="small-heart">♡</div>
-
-            <p class="small-text">A little surprise for you...</p>
+            <div class="small-text">
+                ✨ A little surprise for someone special ✨
+            </div>
 
             <h1>
                 Someone Special<br>
-                Has a Birthday Today
+                Has A Birthday Today 💕
             </h1>
 
-            <p class="intro-text">
-                I made something special just for you.
+            <p>
+                I created something special just for you...
             </p>
 
-            <button class="surprise-btn" onclick="openSurprise()">
-                Open Your Surprise
-                <span>♥</span>
+            <button class="main-btn" onclick="openSurprise()">
+                Open Your Surprise 🎁
             </button>
 
         </div>
@@ -42,102 +46,319 @@
     </section>
 
 
-    <!-- Main Birthday Section -->
-    <section class="birthday" id="birthday">
+    <!-- MAIN WEBSITE -->
+    <main id="birthdayPage" class="hidden">
 
-        <div class="content">
+        <!-- HERO -->
+        <section class="hero">
 
-            <p class="eyebrow">TODAY IS YOUR SPECIAL DAY ✨</p>
+            <div class="hero-content">
 
-            <h1 class="birthday-title">
-                Happy Birthday
-                <span>❤️</span>
-            </h1>
+                <span class="badge">
+                    ✨ A Special Day ✨
+                </span>
 
-            <h2 class="name">
-                RITI
-            </h2>
+                <h1>
+                    Happy Birthday
+                    <span>RITI ❤️</span>
+                </h1>
 
-            <p class="wish">
-                May your life always be filled with happiness,
-                beautiful memories, endless smiles and
-                all the love your heart can hold.
-            </p>
+                <p class="hero-text">
+                    Today isn't just another day...
+                    it's the day someone incredibly special
+                    came into this world.
+                </p>
 
-
-            <!-- Photo -->
-            <div class="photo-wrapper">
-
-                <div class="glow"></div>
-
-                <img
-                    src="WhatsApp Image 2026-05-21 at 8.08.20 PM.jpeg"
-                    alt="Birthday Photo"
-                >
+                <button class="main-btn" onclick="showMessage()">
+                    💌 Open My Message
+                </button>
 
             </div>
 
+            <div class="hero-photo">
+                <img src="WhatsApp Image 2026-05-21 at 8.08.20 PM.jpeg" alt="Birthday Photo">
+            </div>
 
-            <p class="message">
-                You deserve all the beautiful things
-                this world has to offer. 🌸
+        </section>
+
+
+        <!-- COUNTDOWN -->
+        <section class="countdown-section">
+
+            <h2>⏳ Until Your Special Day</h2>
+
+            <div class="countdown">
+
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <small>Days</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <small>Hours</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <small>Minutes</small>
+                </div>
+
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <small>Seconds</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TYPEWRITER -->
+        <section class="message-section">
+
+            <span class="section-label">💖 A Few Words For You</span>
+
+            <h2>
+                You Are Truly Special
+            </h2>
+
+            <p id="typewriter"></p>
+
+        </section>
+
+
+        <!-- WHY SPECIAL -->
+        <section class="special-section">
+
+            <span class="section-label">💕 Just For You</span>
+
+            <h2>Why You're Special</h2>
+
+            <div class="special-grid">
+
+                <div class="special-card">
+                    <div>🌸</div>
+                    <h3>Your Smile</h3>
+                    <p>
+                        Your smile has a magical way of making
+                        everything feel better.
+                    </p>
+                </div>
+
+                <div class="special-card">
+                    <div>✨</div>
+                    <h3>Your Presence</h3>
+                    <p>
+                        You make ordinary moments feel
+                        incredibly memorable.
+                    </p>
+                </div>
+
+                <div class="special-card">
+                    <div>💗</div>
+                    <h3>Your Heart</h3>
+                    <p>
+                        Your kindness and beautiful heart
+                        make you truly unforgettable.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GIFT -->
+        <section class="gift-section">
+
+            <span class="section-label">🎁 Something For You</span>
+
+            <h2>Open Your Gift</h2>
+
+            <div class="gift-box" onclick="openGift()">
+
+                <div class="gift-lid"></div>
+
+                <div class="gift-body">
+                    🎁
+                </div>
+
+            </div>
+
+            <p id="giftText">
+                Click the gift 🎁
             </p>
 
+        </section>
 
-            <button class="memory-btn" onclick="showMessage()">
-                💌 Open My Message
+
+        <!-- GALLERY -->
+        <section class="gallery-section">
+
+            <span class="section-label">📸 Our Memories</span>
+
+            <h2>Beautiful Moments</h2>
+
+            <div class="gallery">
+
+                <div class="gallery-item">
+                    <img src="WhatsApp Image 2026-05-31 at 8.15.51 AM.jpeg" alt="Memory 1">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="WhatsApp Image 3 2026-10-04 at 10.14.07 PM.jpeg" alt="Memory 2">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="WhatsApp Image 2026-05-31 at 8.15.51 AM.jpeg" alt="Memory 3">
+                </div>
+
+                 <div class="gallery-item">
+                    <img src="WhatsApp Image 2026-10-04 at 10.14.07 PM.jpeg" alt="Memory 3">
+                </div>
+
+                 <div class="gallery-item">
+                    <img src="WhatsApp Image4 2026-10-04 at 10.14.08 PM.jpeg" alt="Memory 3">
+                </div> 
+
+                <div class="gallery-item">
+                    <img src="WhatsApp Image 2026-06-28 at 8.10.53 PM.jpeg" alt="Memory 3">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CAKE -->
+        <section class="cake-section">
+
+            <span class="section-label">🎂 Make A Wish</span>
+
+            <h2>Blow The Candle</h2>
+
+            <div class="cake">
+
+                <div class="candle">
+
+                    <div class="flame" id="flame"></div>
+
+                </div>
+
+                <div class="cake-top"></div>
+                <div class="cake-middle"></div>
+                <div class="cake-bottom"></div>
+
+            </div>
+
+            <button class="main-btn" onclick="blowCandle()">
+                🎂 Make A Wish
             </button>
 
-        </div>
+            <p id="cakeMessage"></p>
 
-    </section>
+        </section>
 
 
-    <!-- Hidden Message -->
-    <div class="message-modal" id="messageModal">
+        <!-- SECRET MESSAGE -->
+        <section class="secret-section">
 
-        <div class="modal-card">
+            <span class="section-label">🔐 A Little Secret</span>
 
-            <button class="close" onclick="closeMessage()">×</button>
+            <h2>There's Something Hidden...</h2>
 
-            <div class="envelope">💌</div>
+            <button class="secret-btn" onclick="showSecret()">
+                ✨ Reveal Secret
+            </button>
 
-            <h2>For You ❤️</h2>
+            <p id="secretMessage" class="hidden-secret">
+                You are one of the most beautiful chapters
+                in my story. ❤️
+            </p>
+
+        </section>
+
+
+        <!-- FINAL -->
+        <section class="final-section">
+
+            <div class="balloons">
+                🎈 🎈 🎈
+            </div>
+
+            <h1>
+                Happy Birthday
+                <span>RITI ❤️</span>
+            </h1>
+
+            <p>
+                May your life always be filled with
+                happiness, love, laughter and beautiful memories.
+            </p>
+
+            <div class="final-heart">
+                ❤️
+            </div>
+
+            <p class="signature">
+                From your favorite friend 💕
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- MESSAGE MODAL -->
+    <div id="messageModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close-btn" onclick="closeMessage()">
+                ×
+            </button>
+
+            <div class="letter-icon">
+                💌
+            </div>
+
+            <h2>Dear RITI ❤️</h2>
 
             <p>
                 On your special day, I just want you to know
-                how precious you are.
+                how incredibly wonderful you are.
             </p>
 
             <p>
-                May every dream you have come true,
-                may every smile stay a little longer,
-                and may your life always be surrounded
-                by people who truly love you.
+                May every dream you have come true.
+                May every smile stay forever.
+                And may every new year of your life
+                bring something beautiful.
             </p>
 
-            <h3>
-                Stay happy. Stay beautiful. ✨
-            </h3>
-
-            <p class="signature">
-                From your favorite person ❤️
+            <p>
+                Keep smiling, keep shining,
+                and always stay amazing. ✨
             </p>
+
+            <strong>
+                Happy Birthday! 🎂❤️
+            </strong>
 
         </div>
 
     </div>
 
 
-    <!-- Music Button -->
-    <button class="music-btn" onclick="toggleMusic()" id="musicBtn">
-        🔊
-    </button>
-
-    <!-- Optional music -->
+    <!-- MUSIC -->
     <audio id="birthdayMusic" loop>
-        <source src="birthday-music.mp3" type="audio/mpeg">
+        <source src="song.mpeg" type="audio/mpeg">
     </audio>
+
+    <button id="musicBtn" onclick="toggleMusic()">
+        🎵
+    </button>
 
 
     <script src="script.js"></script>
