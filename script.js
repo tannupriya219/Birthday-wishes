@@ -114,71 +114,6 @@ function type() {
 }
 
 
-/* =========================
-   COUNTDOWN
-========================= */
-
-/*
-   Change this date to the actual
-   birthday date.
-*/
-
-const birthdayDate =
-    new Date("December 31, 2026 00:00:00").getTime();
-
-
-function updateCountdown() {
-
-    const now = new Date().getTime();
-
-    const difference = birthdayDate - now;
-
-    if (difference <= 0) {
-
-        document.getElementById("days").innerHTML = "00";
-        document.getElementById("hours").innerHTML = "00";
-        document.getElementById("minutes").innerHTML = "00";
-        document.getElementById("seconds").innerHTML = "00";
-
-        return;
-    }
-
-    const days =
-        Math.floor(
-            difference / (1000 * 60 * 60 * 24)
-        );
-
-    const hours =
-        Math.floor(
-            (difference / (1000 * 60 * 60)) % 24
-        );
-
-    const minutes =
-        Math.floor(
-            (difference / (1000 * 60)) % 60
-        );
-
-    const seconds =
-        Math.floor(
-            (difference / 1000) % 60
-        );
-
-    document.getElementById("days")
-        .innerHTML = String(days).padStart(2, "0");
-
-    document.getElementById("hours")
-        .innerHTML = String(hours).padStart(2, "0");
-
-    document.getElementById("minutes")
-        .innerHTML = String(minutes).padStart(2, "0");
-
-    document.getElementById("seconds")
-        .innerHTML = String(seconds).padStart(2, "0");
-}
-
-setInterval(updateCountdown, 1000);
-
-updateCountdown();
 
 
 /* =========================
@@ -192,6 +127,8 @@ function openGift() {
 
     giftText.innerHTML =
         "🎉 Surprise! You deserve all the happiness in the world! ❤️";
+
+        window.open("https://1drv.ms/p/c/1346301d783a2bda/IQDYa9vucPhpQKMLtwbJL6nYASyaFfMrqiXYmwmAFij5AYE?e=RM5fK4");
 
     createConfetti();
 
